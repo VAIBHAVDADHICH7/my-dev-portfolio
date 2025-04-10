@@ -1,4 +1,6 @@
+
 'use client'
+/** @jsxImportSource @react-three/fiber */
 
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
