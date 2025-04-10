@@ -1,15 +1,10 @@
 'use client'
 
 import { useRef } from 'react'
-import { useFrame } from '@react-three/fiber'
-import * as THREE from 'three'
+import { Mesh } from 'three'
 
 export function Sphere() {
-  const meshRef = useRef<THREE.Mesh>(null!)
-
-  useFrame(() => {
-    meshRef.current.rotation.y += 0.003
-  })
+  const meshRef = useRef<Mesh>(null)
 
   return (
     <mesh ref={meshRef}>
