@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom syntax highlight style */
+pre, code {
+  font-family: 'Fira Code', monospace;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  border-radius: 6px;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
