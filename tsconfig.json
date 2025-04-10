@@ -16,6 +16,18 @@
       "jsx": "preserve"
     },
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    {
+        "compilerOptions": {
+          ...
+        },
+        "include": [
+          "app",
+          "components",
+          "types",          ← ✅ this ensures TypeScript finds your declaration
+          "next-env.d.ts"
+        ]
+      }
+      
     "exclude": ["node_modules"]
   }
   
