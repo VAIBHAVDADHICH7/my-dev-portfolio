@@ -1,7 +1,12 @@
+'use client'
+
 import dynamic from 'next/dynamic'
 
 // Lazy-load code editor
-const PlaygroundEditor = dynamic(() => import('../../components/PlaygroundEditor'), { ssr: false })
+const PlaygroundEditor = dynamic(() => import('../../components/PlaygroundEditor'), { 
+  ssr: false,
+  loading: () => <p>Loading editor...</p>
+})
 
 export default function PlaygroundPage() {
   return (
@@ -11,3 +16,4 @@ export default function PlaygroundPage() {
     </div>
   )
 }
+
