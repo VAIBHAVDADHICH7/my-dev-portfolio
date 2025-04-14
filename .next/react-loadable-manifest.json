@@ -1,20 +1,22 @@
 {
-  "app\\playground\\page.tsx -> ../../components/PlaygroundEditor": {
-    "id": 3847,
+  "app\\page.tsx -> ../components/Skills3D": {
+    "id": "app\\page.tsx -> ../components/Skills3D",
     "files": [
-      "static/chunks/847.ce9577a54595857a.js"
+      "static/chunks/_app-pages-browser_components_Skills3D_tsx.js"
     ]
   },
-  "node_modules\\next\\dist\\client\\index.js -> ../pages/_app": {
-    "id": 472,
-    "files": [
-      "static/chunks/472.a3826d29d6854395.js"
-    ]
+  "node_modules\\@react-three\\drei\\core\\VideoTexture.js -> hls.js": {
+    "id": "node_modules\\@react-three\\drei\\core\\VideoTexture.js -> hls.js",
+    "files": []
   },
-  "node_modules\\next\\dist\\client\\index.js -> ../pages/_error": {
-    "id": 9341,
+  "node_modules\\@react-three\\drei\\web\\FaceLandmarker.js -> @mediapipe/tasks-vision": {
+    "id": "node_modules\\@react-three\\drei\\web\\FaceLandmarker.js -> @mediapipe/tasks-vision",
+    "files": []
+  },
+  "node_modules\\next\\dist\\client\\components\\react-dev-overlay\\utils\\use-websocket.js -> @vercel/turbopack-ecmascript-runtime/browser/dev/hmr-client/hmr-client.ts": {
+    "id": "node_modules\\next\\dist\\client\\components\\react-dev-overlay\\utils\\use-websocket.js -> @vercel/turbopack-ecmascript-runtime/browser/dev/hmr-client/hmr-client.ts",
     "files": [
-      "static/chunks/341.056900400c7cb71c.js"
+      "static/chunks/_app-pages-browser_node_modules_next_dist_client_dev_noop-turbopack-hmr_js.js"
     ]
   }
 }
