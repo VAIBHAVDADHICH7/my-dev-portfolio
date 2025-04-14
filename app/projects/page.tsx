@@ -6,14 +6,16 @@ const projects = [
     description: 'A Chrome extension to debug UI frameworks.',
     tech: ['TypeScript', 'Vite', 'Chrome API'],
     github: 'https://github.com/yourusername/open-devtools',
-    demo: 'https://open-devtools.vercel.app'
+    demo: 'https://open-devtools.vercel.app',
+    tags: ['debugging', 'chrome-extension']
   },
   {
     title: 'DevBlog CMS',
     description: 'A simple markdown-based blog CMS for developers.',
     tech: ['Next.js', 'Tailwind', 'MDX'],
     github: 'https://github.com/yourusername/devblog-cms',
-    demo: ''
+    demo: '',
+    tags: ['blog', 'cms']
   }
 ]
 
