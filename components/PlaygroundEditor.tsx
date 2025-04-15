@@ -7,7 +7,7 @@ export default function PlaygroundEditor() {
 
   return (
     <div className="grid gap-6">
-      <div className="border p-4 rounded bg-[#1e1e1e] text-white font-mono">
+      <div className="border p-4 rounded bg-[#1e1e1e] text-white font-mono" dir="ltr">
         <div
           contentEditable
           onInput={(e) => setCode((e.target as HTMLElement).innerText)}

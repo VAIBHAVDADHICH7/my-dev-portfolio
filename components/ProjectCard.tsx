@@ -37,7 +37,7 @@ const projects = [
  */
 export default function ProjectCard({ title, description, tech, github, demo }: ProjectCardProps) {
   return (
-    <div className="bg-neutral-900 p-6 rounded-lg shadow-md space-y-3">
+    <div className="bg-neutral-900 p-6 rounded-lg shadow-md space-y-3 hover:shadow-lg transition">
       {/* Project title */}
       <h2 className="text-xl font-bold text-blue-400">{title}</h2>
       
@@ -54,14 +54,14 @@ export default function ProjectCard({ title, description, tech, github, demo }: 
       {/* Links section */}
       <div className="flex gap-4 mt-2">
         {/* GitHub link (always shown) */}
-        <Link href={github} target="_blank" className="text-white flex items-center gap-2 hover:text-blue-400">
-          <FaGithub /> GitHub
+        <Link href={github} target="_blank" aria-label={`${title} GitHub`}>
+          <FaGithub className="text-white hover:text-blue-400" />
         </Link>
         
         {/* Demo link (only shown if demo prop exists) */}
         {demo && (
-          <Link href={demo} target="_blank" className="text-green-400 underline hover:text-green-300">
-            Live Demo
+          <Link href={demo} target="_blank" aria-label={`${title} Live Demo`}>
+            <span className="text-green-400 underline hover:text-green-300">Live Demo</span>
           </Link>
         )}
       </div>

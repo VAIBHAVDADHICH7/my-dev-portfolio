@@ -2,13 +2,8 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useState } from 'react'
 
-/**
- * Navigation items configuration
- * @constant {Array} navItems
- * @property {string} label - Display text for the navigation item
- * @property {string} href - Path for the navigation link
- */
 const navItems = [
   { label: 'Home', href: '/' },
   { label: 'Projects', href: '/projects' },
@@ -17,34 +12,80 @@ const navItems = [
   { label: 'Contact', href: '/contact' }
 ]
 
-/**
- * Header component - Displays the site header with navigation links
- * @returns {JSX.Element} Header element with logo and navigation
- */
 export default function Header() {
-  // Get current path for active link highlighting
   const pathname = usePathname()
+  const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <header className="flex justify-between items-center py-4 px-6 border-b border-neutral-700">
-      {/* Site title/logo */}
-      <h1 className="font-mono text-lg font-bold tracking-wide">vaibhav.dev</h1>
-      
-      {/* Navigation links */}
-      <nav className="space-x-4 text-sm">
-        {navItems.map(({ label, href }) => (
-          <Link
-            key={label}
-            href={href}
-            className={`hover:text-blue-500 transition ${
-              // Highlight current active route
-              pathname === href ? 'text-blue-500' : ''
-            }`}
+    <header className="border-b border-neutral-700">
+      <div className="flex justify-between items-center py-4 px-6 max-w-7xl mx-auto">
+        <h1 className="font-mono text-lg font-bold tracking-wide">vaibhav.dev</h1>
+
+        {/* Desktop navigation */}
+        <nav className="hidden md:flex space-x-6 text-sm">
+          {navItems.map(({ label, href }) => (
+            <Link
+              key={label}
+              href={href}
+              className={`hover:text-blue-500 transition ${
+                pathname === href ? 'text-blue-500' : ''
+              }`}
+            >
+              {label}
+            </Link>
+          ))}
+        </nav>
+
+        {/* Mobile menu button */}
+        <button
+          className="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+          aria-label="Toggle menu"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <svg
+            className="h-6 w-6 text-white"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
           >
-            {label}
-          </Link>
-        ))}
-      </nav>
+            {menuOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            )}
+          </svg>
+        </button>
+      </div>
+
+      {/* Mobile navigation menu */}
+      {menuOpen && (
+        <nav className="md:hidden px-6 pb-4 space-y-2 bg-neutral-900">
+          {navItems.map(({ label, href }) => (
+            <Link
+              key={label}
+              href={href}
+              className={`block py-2 text-white hover:text-blue-500 transition ${
+                pathname === href ? 'text-blue-500' : ''
+              }`}
+              onClick={() => setMenuOpen(false)}
+            >
+              {label}
+            </Link>
+          ))}
+        </nav>
+      )}
     </header>
   )
 }
