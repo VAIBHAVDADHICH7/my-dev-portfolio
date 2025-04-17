@@ -9,11 +9,13 @@ import BlogPreview from '../components/BlogPreview'
 
 export default function Home() {
   return (
-    <section className="space-y-20">
-      <Hero />
-      <Terminal />
+    <>
       <Skills3D />
-      <BlogPreview />
-    </section>
+      <div className="relative z-10 space-y-20">
+        <Hero />
+        <Terminal />
+        <BlogPreview />
+      </div>
+    </>
   )
 }

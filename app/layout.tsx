@@ -29,7 +29,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body className="bg-white dark:bg-[#1e1e1e] text-black dark:text-white font-sans">
         <Header />
-        <main className="min-h-screen px-6 py-10">{children}</main>
+        <main className="min-h-screen px-6 pt-24 pb-10">{children}</main>
         <Footer />
         <ThemeToggle />
       </body>

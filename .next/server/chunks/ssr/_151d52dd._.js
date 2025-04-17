@@ -230,10 +230,10 @@ function SocialLinks() {
         }
     ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "mt-8 max-w-md mx-auto p-6 bg-primary rounded-lg shadow-lg",
+        className: "mt-8 max-w-md mx-auto p-6 bg-primary dark:bg-gray-900 rounded-lg shadow-lg",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                className: "text-2xl font-bold mb-6 text-white text-center",
+                className: "text-2xl font-bold mb-6 text-black dark:text-white text-center",
                 children: "Connect with me"
             }, void 0, false, {
                 fileName: "[project]/components/SocialLinks.tsx",
@@ -246,7 +246,7 @@ function SocialLinks() {
                         href: href,
                         target: "_blank",
                         rel: "noopener noreferrer",
-                        className: "p-3 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg flex items-center justify-center text-white hover:text-gray-300",
+                        className: "p-3 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg flex items-center justify-center text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-300",
                         "aria-label": `Link to ${href}`,
                         children: icon
                     }, href, false, {

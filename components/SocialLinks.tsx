@@ -47,8 +47,8 @@ export default function SocialLinks() {
   ]
 
   return (
-    <div className="mt-8 max-w-md mx-auto p-6 bg-primary rounded-lg shadow-lg">
-      <h2 className="text-2xl font-bold mb-6 text-white text-center">Connect with me</h2>
+    <div className="mt-8 max-w-md mx-auto p-6 bg-primary dark:bg-gray-900 rounded-lg shadow-lg">
+      <h2 className="text-2xl font-bold mb-6 text-black dark:text-white text-center">Connect with me</h2>
       <div className="flex flex-wrap justify-center gap-6">
         {socialLinks.map(({ href, icon }) => (
           <Link
@@ -56,7 +56,7 @@ export default function SocialLinks() {
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg flex items-center justify-center text-white hover:text-gray-300"
+            className="p-3 rounded-full transition-colors duration-300 shadow-md hover:shadow-lg flex items-center justify-center text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-300"
             aria-label={`Link to ${href}`}
           >
             {icon}
