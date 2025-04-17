@@ -1,7 +1,1 @@
-{
-  "/blog/page": "app/blog/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/page": "app/page.js",
-  "/playground/page": "app/playground/page.js",
-  "/projects/page": "app/projects/page.js"
-}
+{}
