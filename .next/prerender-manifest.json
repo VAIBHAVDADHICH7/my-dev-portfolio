@@ -1,6 +1,30 @@
 {
   "version": 4,
   "routes": {
+    "/projects": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "Next-Action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/projects",
+      "dataRoute": "/projects.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/": {
       "experimentalBypassFor": [
         {
@@ -25,7 +49,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/playground": {
+    "/blog": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -38,8 +62,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/playground",
-      "dataRoute": "/playground.rsc",
+      "srcRoute": "/blog",
+      "dataRoute": "/blog.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -73,7 +97,7 @@
         "x-next-revalidate-tag-token"
       ]
     },
-    "/projects": {
+    "/playground": {
       "experimentalBypassFor": [
         {
           "type": "header",
@@ -86,32 +110,8 @@
         }
       ],
       "initialRevalidateSeconds": false,
-      "srcRoute": "/projects",
-      "dataRoute": "/projects.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/blog": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "Next-Action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/blog",
-      "dataRoute": "/blog.rsc",
+      "srcRoute": "/playground",
+      "dataRoute": "/playground.rsc",
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -125,8 +125,8 @@
   "dynamicRoutes": {},
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "96106c5807abdb933348e44f32ed2fc2",
-    "previewModeSigningKey": "2c022cf8116f36e57f837fd0d4c78ec4f5ddadcdd55e86ebce4ade44b2d810ea",
-    "previewModeEncryptionKey": "17e4ec9f2b84cb97055d4fdc6e85ec93ff5da4fe501d10823cc3ecd0105d1ba9"
+    "previewModeId": "b3b52add3747979da4a4a48b0bf8e69d",
+    "previewModeSigningKey": "41aee1c54529d17a39b0bd95fca8d1fc3b3d84a64b4bb64fa21037623dc45bba",
+    "previewModeEncryptionKey": "aecdf9515217c52c7826769736279163691c60e4e18a86fa50e3ea87a3b3df59"
   }
 }
