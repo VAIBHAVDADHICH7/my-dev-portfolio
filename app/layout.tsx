@@ -8,6 +8,7 @@ import ThemeToggle from '../components/ThemeToggle'
 export const metadata = {
   title: 'Vaibhav Dadhich | Developer Portfolio',
   description: 'Personal portfolio website built with Next.js showcasing projects, blog, and interactive playground.',
+  metadataBase: new URL('https://vaibhav.dev'),
   openGraph: {
     title: 'Vaibhav Dadhich | Developer Portfolio',
     description: 'Personal portfolio website built with Next.js showcasing projects, blog, and interactive playground.',

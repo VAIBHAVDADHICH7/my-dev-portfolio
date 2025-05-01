@@ -1,8 +1,20 @@
-/** @type {import('next').NextConfig} */
+/**
+ * @type {import('next').NextConfig}
+ */
 const nextConfig = {
-  // turbopack: {
-  //   // Turbopack configuration options
-  // }
+  experimental: {
+    appDir: true,
+    serverActions: true,
+  },
+  images: {
+    domains: ['images.unsplash.com'],
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  react: {
+    refresh: false,
+  },
 }
 
 module.exports = nextConfig
