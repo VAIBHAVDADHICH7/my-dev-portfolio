@@ -1,0 +1,9 @@
+{
+  "[project]/components/PlaygroundEditor.tsx [app-client] (ecmascript, next/dynamic entry)": {
+    "id": "[project]/components/PlaygroundEditor.tsx [app-client] (ecmascript, next/dynamic entry)",
+    "files": [
+      "static/chunks/components_PlaygroundEditor_tsx_ca8ba1a3._.js",
+      "static/chunks/components_PlaygroundEditor_tsx_97e53719._.js"
+    ]
+  }
+}
