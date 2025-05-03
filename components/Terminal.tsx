@@ -26,12 +26,18 @@ export default function Terminal() {
   }
 
   return (
-    <div className="bg-[#1e1e1e] text-green-400 font-mono p-6 rounded-lg shadow-xl max-w-2xl mx-auto" role="region" aria-label="Terminal command interface">
+    <div
+      className="bg-[#1e1e1e] text-green-400 font-mono p-6 rounded-lg shadow-xl max-w-2xl mx-auto w-full overflow-auto break-words"
+      role="region"
+      aria-label="Terminal command interface"
+    >
       {history.map((line, index) => (
-        <pre key={index} className="whitespace-pre-wrap">{line}</pre>
+        <pre key={index} className="whitespace-pre-wrap break-words">{line}</pre>
       ))}
       <div className="flex items-center">
-        <label htmlFor="terminal-input" className="sr-only">Terminal command input</label>
+        <label htmlFor="terminal-input" className="sr-only">
+          Terminal command input
+        </label>
         <span className="mr-2">$</span>
         <input
           id="terminal-input"

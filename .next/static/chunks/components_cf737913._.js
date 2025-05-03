@@ -210,7 +210,7 @@ function ThemeToggle() {
             // Check localStorage for saved theme preference
             const savedTheme = localStorage.getItem('theme');
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            // Set initial theme
+            // Set initial theme without causing flash
             const initialTheme = savedTheme === 'dark' || !savedTheme && prefersDark;
             setIsDark(initialTheme);
             document.documentElement.classList.toggle('dark', initialTheme);

@@ -2,10 +2,9 @@
     script: typeof document === "object" ? document.currentScript : undefined,
     chunks: [
   "static/chunks/app_globals_73c37791.css",
-  "static/chunks/node_modules_next_6c40afc4._.js",
-  "static/chunks/node_modules_react-icons_fa_index_esm_cf819b17.js",
-  "static/chunks/node_modules_react-icons_lib_esm_44027767._.js",
-  "static/chunks/components_cf737913._.js"
+  "static/chunks/_f9270bf5._.js",
+  "static/chunks/node_modules_next_02ed9872._.js",
+  "static/chunks/components_5d3545d9._.js"
 ],
     source: "dynamic"
 });
