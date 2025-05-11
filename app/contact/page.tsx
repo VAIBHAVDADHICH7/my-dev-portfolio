@@ -1,33 +1,35 @@
 import React from 'react'
-import Head from 'next/head'
 import ContactForm from '../../components/ContactForm'
 import SocialLinks from '../../components/SocialLinks'
+
+export const metadata = {
+  title: 'Contact Me - Get in Touch',
+  description: "Contact me for projects, collaborations, or inquiries. I'm open to discussing new ideas and opportunities.",
+  keywords: 'contact, get in touch, projects, collaboration, inquiries, developer, portfolio',
+  authors: [{ name: 'Vaibhav Dadhich' }],
+  openGraph: {
+    title: 'Contact Me - Get in Touch',
+    description: "Contact me for projects, collaborations, or inquiries. I'm open to discussing new ideas and opportunities.",
+    url: 'https://www.vaibhavdadhich.me/contact',
+    type: 'website',
+    images: [
+      {
+        url: '/preview.png',
+        alt: 'Contact page preview image',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact Me - Get in Touch',
+    description: "Contact me for projects, collaborations, or inquiries. I'm open to discussing new ideas and opportunities.",
+    images: ['/preview.png'],
+  },
+}
 
 export default function ContactPage() {
   return (
     <>
-      <Head>
-        <title>Contact Me - Get in Touch</title>
-        <meta name="description" content="Contact me for projects, collaborations, or inquiries. I'm open to discussing new ideas and opportunities." />
-<meta name="keywords" content="contact, get in touch, projects, collaboration, inquiries, developer, portfolio" />
-<meta name="author" content="Vaibhav Dadhich" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-{/* Open Graph meta tags */}
-<meta property="og:title" content="Contact Me - Get in Touch" />
-<meta property="og:description" content="Contact me for projects, collaborations, or inquiries. I'm open to discussing new ideas and opportunities." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.vaibhavdadhich.me/contact" />
-<meta property="og:image" content="https://www.vaibhavdadhich.me/preview.png" />
-<meta property="og:image:alt" content="Contact page preview image" />
-<meta property="og:site_name" content="Vaibhav Dadhich Portfolio" />
-
-{/* Twitter Card meta tags */}
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Contact Me - Get in Touch" />
-<meta name="twitter:description" content="Contact me for projects, collaborations, or inquiries. I'm open to discussing new ideas and opportunities." />
-<meta name="twitter:image" content="https://www.vaibhavdadhich.me/preview.png" />
-      </Head>
       <main style={{ maxWidth: '720px', margin: '2rem auto', padding: '0 1rem', fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif", color: '#1f2937' }}>
         <h1 style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '1rem', textAlign: 'center', color: '#2563eb' }}>
           Contact Me

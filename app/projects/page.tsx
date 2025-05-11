@@ -1,6 +1,31 @@
 import ProjectCard from '../../components/ProjectCard'
 import projects from './projectsData'
 
+export const metadata = {
+  title: 'Projects - Developer Portfolio',
+  description: 'A showcase of projects developed by Vaibhav Dadhich, including web applications, blogs, and interactive playgrounds.',
+  keywords: 'projects, developer portfolio, web applications, blogs, interactive playgrounds, Vaibhav Dadhich',
+  authors: [{ name: 'Vaibhav Dadhich' }],
+  openGraph: {
+    title: 'Projects - Developer Portfolio',
+    description: 'A showcase of projects developed by Vaibhav Dadhich, including web applications, blogs, and interactive playgrounds.',
+    url: 'https://www.vaibhavdadhich.me/projects',
+    type: 'website',
+    images: [
+      {
+        url: '/preview.png',
+        alt: 'Projects page preview image',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Projects - Developer Portfolio',
+    description: 'A showcase of projects developed by Vaibhav Dadhich, including web applications, blogs, and interactive playgrounds.',
+    images: ['/preview.png'],
+  },
+}
+
 /**
  * ProjectsPage component - Displays a list of projects using ProjectCard components
  * @returns {JSX.Element} A list of project cards

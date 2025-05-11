@@ -1,7 +1,4 @@
-'use client'
-
 import './globals.css'
-import React, { useEffect, useState, ReactNode } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import DeferredComponents from '../components/DeferredComponents'
@@ -30,7 +27,7 @@ const firaCode = Fira_Code({
   // disableRuntime: true, // removed because it's not a valid option
 })
 
-const metadata = {
+export const metadata = {
   title: 'Vaibhav Dadhich | Developer Portfolio',
   description: 'Personal portfolio website built with Next.js showcasing projects, blog, and interactive playground.',
   metadataBase: new URL('https://vaibhavdadhich.me'),
@@ -61,31 +58,7 @@ const metadata = {
   // Instead, add structured data script manually in the layout component
 }
 
-export default function RootLayout({ children }: { children: ReactNode }) {
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) {
-    // Render a fallback UI or nothing on the server to avoid hydration mismatch
-    return (
-      <html lang="en">
-        <head>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-          />
-        </head>
-        <body>
-          {/* Optionally render a loading state */}
-          <div />
-        </body>
-      </html>
-    )
-  }
-
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.className} ${firaCode.className}`}>
       <head>
