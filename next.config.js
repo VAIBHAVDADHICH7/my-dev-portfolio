@@ -2,24 +2,27 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true'
 })
 
-/** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  async headers() {
-    return [
+  images: {
+    remotePatterns: [
       {
-        source: '/:all*(svg|jpg|jpeg|png|gif|ico|webp|avif|css|js)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        pathname: '/**',
       },
-    ]
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+        pathname: '/**',
+      },
+    ],
   },
+  turbopack: {
+    // Add any specific Turbopack options here if needed
+  }
 }
 
 module.exports = withBundleAnalyzer(nextConfig)

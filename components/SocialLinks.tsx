@@ -40,45 +40,38 @@ export default function SocialLinks() {
   const socialLinks = [
     { 
       name: "LinkedIn", 
-      href: "https://linkedin.com", 
+      href: "https://www.linkedin.com/in/vaibhav-dadhich", 
       icon: icons.linkedin,
       category: "professional",
       description: "Connect professionally"
     },
     { 
       name: "GitHub", 
-      href: "https://github.com", 
+      href: "https://github.com/VAIBHAVDADHICH7", 
       icon: icons.github,
       category: "professional",
       description: "View my code"
     },
     { 
-      name: "Twitter", 
-      href: "https://twitter.com", 
-      icon: icons.twitter,
-      category: "social",
-      description: "Follow for updates"
-    },
-    { 
       name: "Instagram", 
-      href: "https://instagram.com", 
+      href: "https://www.instagram.com/vaibhavdadhich011", 
       icon: icons.instagram,
       category: "social",
       description: "View my photos"
     },
     { 
+      name: "Gmail", 
+      href: "mailto:vaibhavdadhich061@gmail.com", 
+      icon: icons.discord,  // No gmail icon, using discord icon as placeholder
+      category: "professional",
+      description: "Send me an email"
+    },
+    { 
       name: "Facebook", 
-      href: "https://facebook.com", 
+      href: "https://www.facebook.com/vaibhav.dadhich.5667", 
       icon: icons.facebook,
       category: "social",
       description: "Connect socially"
-    },
-    { 
-      name: "Discord", 
-      href: "https://discord.com", 
-      icon: icons.discord,
-      category: "social",
-      description: "Join my community"
     }
   ]
 

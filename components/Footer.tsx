@@ -6,11 +6,11 @@ export default function Footer() {
   return (
     <footer className="text-center text-sm mt-20 py-10 border-t border-neutral-700">
       {/* Dynamically displays current year in copyright */}
-      <p className="mb-4">&copy; {new Date().getFullYear()} Vaibhav. All rights reserved.</p>
+      <p className="mb-4">&copy; {new Date().getFullYear()} Vaibhav Dadhich. All rights reserved.</p>
       <div className="flex justify-center space-x-6">
         {/* GitHub */}
         <a
-          href="https://github.com/Vaibhav"
+          href="https://github.com/VAIBHAVDADHICH7"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
@@ -27,7 +27,7 @@ export default function Footer() {
         </a>
         {/* LinkedIn */}
         <a
-          href="https://linkedin.com/in/Vaibhav"
+          href="https://www.linkedin.com/in/vaibhav-dadhich"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
@@ -44,7 +44,7 @@ export default function Footer() {
         </a>
         {/* Instagram */}
         <a
-          href="https://instagram.com/Vaibhav"
+          href="https://www.instagram.com/vaibhavdadhich011"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
@@ -65,8 +65,31 @@ export default function Footer() {
             <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
           </svg>
         </a>
+        {/* Facebook */}
+        <a
+          href="https://www.facebook.com/vaibhav.dadhich.5667"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+          className="text-black dark:text-white hover:text-blue-700 dark:hover:text-blue-600 transition"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="h-6 w-6">
+            <path d="M22.675 0h-21.35C.6 0 0 .6 0 1.342v21.316C0 23.4.6 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.466.099 2.797.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.31h3.59l-.467 3.622h-3.123V24h6.116c.725 0 1.325-.6 1.325-1.342V1.342C24 .6 23.4 0 22.675 0z"/>
+          </svg>
+        </a>
+        {/* Gmail */}
+        <a
+          href="mailto:vaibhavdadhich061@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Gmail"
+          className="text-black dark:text-white hover:text-red-600 dark:hover:text-red-500 transition"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="h-6 w-6">
+            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+        </a>
       </div>
     </footer>
   )
 }
-  

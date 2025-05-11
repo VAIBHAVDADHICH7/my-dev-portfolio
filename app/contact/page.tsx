@@ -17,8 +17,8 @@ export default function ContactPage() {
 <meta property="og:title" content="Contact Me - Get in Touch" />
 <meta property="og:description" content="Contact me for projects, collaborations, or inquiries. I'm open to discussing new ideas and opportunities." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://vaibhav.dev/contact" />
-<meta property="og:image" content="https://vaibhav.dev/preview.png" />
+<meta property="og:url" content="https://www.vaibhavdadhich.me/contact" />
+<meta property="og:image" content="https://www.vaibhavdadhich.me/preview.png" />
 <meta property="og:image:alt" content="Contact page preview image" />
 <meta property="og:site_name" content="Vaibhav Dadhich Portfolio" />
 
@@ -26,7 +26,7 @@ export default function ContactPage() {
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Contact Me - Get in Touch" />
 <meta name="twitter:description" content="Contact me for projects, collaborations, or inquiries. I'm open to discussing new ideas and opportunities." />
-<meta name="twitter:image" content="https://vaibhav.dev/preview.png" />
+<meta name="twitter:image" content="https://www.vaibhavdadhich.me/preview.png" />
       </Head>
       <main style={{ maxWidth: '720px', margin: '2rem auto', padding: '0 1rem', fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif", color: '#1f2937' }}>
         <h1 style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '1rem', textAlign: 'center', color: '#2563eb' }}>
@@ -42,10 +42,10 @@ export default function ContactPage() {
           </h2>
           <ul style={{ listStyle: 'none', padding: 0, color: '#374151' }}>
             <li style={{ marginBottom: '0.5rem' }}>
-              <strong>Email:</strong> <a href="mailto:contact@example.com" style={{ color: '#2563eb', textDecoration: 'none' }}>contact@example.com</a>
+              <strong>Email:</strong> <a href="mailto:vaibhavdadhich061@gmail.com" style={{ color: '#2563eb', textDecoration: 'none' }}>vaibhavdadhich061@gmail.com</a>
             </li>
             <li style={{ marginBottom: '0.5rem' }}>
-              <strong>Location:</strong> San Francisco, CA
+              <strong>Location:</strong> Jhotwara, Jaipur
             </li>
             <li>
               <strong>Response Time:</strong> Typically within 24-48 hours on business days

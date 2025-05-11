@@ -2,10 +2,10 @@ export const structuredData = {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Vaibhav Dadhich",
-  "url": "https://vaibhav.dev",
+  "url": "https://www.vaibhavdadhich.me",
   "sameAs": [
-    "https://github.com/vaibhavdadhich",
-    "https://linkedin.com/in/vaibhavdadhich"
+    "https://github.com/VAIBHAVDADHICH7",
+    "https://linkedin.com/in/vaibhav-dadhich"
   ],
   "jobTitle": "Developer",
   "worksFor": {
