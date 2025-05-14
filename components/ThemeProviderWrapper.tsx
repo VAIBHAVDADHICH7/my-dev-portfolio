@@ -1,20 +1,22 @@
 'use client'
 
-import { ThemeProvider } from 'next-themes'
-import React, { ReactNode } from 'react'
+import { useEffect } from 'react'
 
-interface ThemeProviderWrapperProps {
-  children: ReactNode
+export default function ThemeProviderWrapper({ children }: { children: React.ReactNode }) {
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+    
+    const handleChange = (e: MediaQueryListEvent | MediaQueryList) => {
+      if (!localStorage.theme) {
+        document.documentElement.classList.toggle('dark', e.matches)
+        document.documentElement.style.colorScheme = e.matches ? 'dark' : 'light'
+      }
+    }
+
+    mediaQuery.addEventListener('change', handleChange)
+    
+    return () => mediaQuery.removeEventListener('change', handleChange)
+  }, [])
+
+  return <>{children}</>
 }
-
-const ThemeProviderWrapper: React.FC<ThemeProviderWrapperProps> = ({ children }) => {
-  return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-      <div className="bg-white dark:bg-[#1e1e1e] text-black dark:text-white font-sans">
-        {children}
-      </div>
-    </ThemeProvider>
-  )
-}
-
-export default ThemeProviderWrapper

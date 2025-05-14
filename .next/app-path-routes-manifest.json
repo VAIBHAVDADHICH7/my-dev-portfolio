@@ -1,9 +1,9 @@
 {
   "/_not-found/page": "/_not-found",
-  "/blog/page": "/blog",
   "/playground/page": "/playground",
-  "/page": "/",
+  "/blog/page": "/blog",
   "/referencePage/page": "/referencePage",
-  "/contact/page": "/contact",
-  "/projects/page": "/projects"
+  "/projects/page": "/projects",
+  "/page": "/",
+  "/contact/page": "/contact"
 }

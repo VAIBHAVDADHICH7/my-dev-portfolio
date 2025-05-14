@@ -8,24 +8,18 @@ import { structuredData } from './structuredData'
 
 import ThemeProviderWrapper from '../components/ThemeProviderWrapper'
 
-import type { Metadata } from 'next'
-
 import { Inter, Fira_Code } from 'next/font/google'
 
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
   display: 'swap',
-  // disable automatic injection of font CSS classes to avoid hydration mismatch
-  // this requires manual application of font classes if needed
-  // disableRuntime: true, // removed because it's not a valid option
 })
 
 const firaCode = Fira_Code({
   subsets: ['latin'],
   variable: '--font-fira-code',
   display: 'swap',
-  // disableRuntime: true, // removed because it's not a valid option
 })
 
 export const metadata = {
@@ -55,25 +49,36 @@ export const metadata = {
   icons: {
     icon: '/favicon.ico',
   },
-  // Remove scripts field as it is not supported in Metadata type
-  // Instead, add structured data script manually in the layout component
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.className} ${firaCode.className}`}>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                let isDark = localStorage.theme === 'dark' || 
+                  (!localStorage.theme && window.matchMedia('(prefers-color-scheme: dark)').matches);
+                document.documentElement.classList.toggle('dark', isDark);
+                document.documentElement.style.colorScheme = isDark ? 'dark' : 'light';
+              } catch (e) {}
+            `,
+          }}
+        />
       </head>
-      <body>
+      <body className={`${inter.className} ${firaCode.className}`} suppressHydrationWarning>
         <ThemeProviderWrapper>
           <Header />
           <main className="min-h-screen px-6 pt-24 pb-10">{children}</main>
           <Footer />
           <DeferredComponents />
+          <Analytics />
         </ThemeProviderWrapper>
       </body>
     </html>
