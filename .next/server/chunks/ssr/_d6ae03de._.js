@@ -104,7 +104,7 @@ function BlogPreview() {
         className: "mt-16 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                className: "text-3xl font-semibold mb-6 text-white dark:text-gray-200",
+                className: "text-3xl font-semibold mb-6 text-gray-900 dark:text-gray-200",
                 children: "Latest from the Blog"
             }, void 0, false, {
                 fileName: "[project]/components/BlogPreview.tsx",
@@ -112,7 +112,7 @@ function BlogPreview() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                className: "text-gray-700 dark:text-gray-200 mb-6 max-w-3xl mx-auto",
+                className: "text-gray-700 dark:text-gray-300 mb-6 max-w-3xl mx-auto",
                 children: "In-depth tutorials, case studies, and developer insights."
             }, void 0, false, {
                 fileName: "[project]/components/BlogPreview.tsx",

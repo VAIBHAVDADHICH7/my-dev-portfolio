@@ -1,28 +1,11 @@
 'use client'
 
-import { useEffect, useState } from 'react'
 import { FaMoon, FaSun } from 'react-icons/fa'
+import { useTheme } from './ThemeProviderWrapper'
 
 export default function ThemeToggle() {
-  const [isDark, setIsDark] = useState(false)
-
-  useEffect(() => {
-    // Check localStorage for saved theme preference
-    const savedTheme = localStorage.getItem('theme')
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-
-    // Set initial theme without causing flash
-    const initialTheme = savedTheme === 'dark' || (!savedTheme && prefersDark)
-    setIsDark(initialTheme)
-    document.documentElement.classList.toggle('dark', initialTheme)
-  }, [])
-
-  const toggleTheme = () => {
-    const newTheme = !isDark
-    setIsDark(newTheme)
-    localStorage.setItem('theme', newTheme ? 'dark' : 'light')
-    document.documentElement.classList.toggle('dark', newTheme)
-  }
+  const { theme, toggleTheme } = useTheme()
+  const isDark = theme === 'dark'
 
   return (
     <button

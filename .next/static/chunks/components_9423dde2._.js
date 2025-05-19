@@ -75,7 +75,7 @@ function Header() {
                 className: "flex justify-between items-center py-4 px-6",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                        className: "font-mono text-lg font-bold tracking-wide select-none cursor-default",
+                        className: "font-mono text-lg font-bold tracking-wide select-none cursor-default text-black dark:text-white",
                         children: "Vaibhav.dev"
                     }, void 0, false, {
                         fileName: "[project]/components/Header.tsx",
@@ -88,7 +88,7 @@ function Header() {
                         "aria-label": "Primary navigation",
                         children: navItems.map(({ label, href })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                 href: href,
-                                className: `hover:text-blue-500 transition ${pathname === href ? 'text-blue-500' : ''}`,
+                                className: `hover:text-blue-500 transition ${pathname === href ? 'text-blue-500 dark:text-blue-400' : 'text-black dark:text-white'}`,
                                 children: label
                             }, label, false, {
                                 fileName: "[project]/components/Header.tsx",
@@ -154,7 +154,7 @@ function Header() {
                 "aria-label": "Mobile navigation",
                 children: navItems.map(({ label, href })=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         href: href,
-                        className: `block py-2 text-black dark:text-white hover:text-blue-500 transition ${pathname === href ? 'text-blue-500' : ''}`,
+                        className: `block py-2 hover:text-blue-500 transition ${pathname === href ? 'text-blue-500 dark:text-blue-400' : 'text-black dark:text-white'}`,
                         onClick: ()=>setMenuOpen(false),
                         children: label
                     }, label, false, {
@@ -250,24 +250,55 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
 __turbopack_context__.s({
-    "default": (()=>ThemeProviderWrapper)
+    "default": (()=>ThemeProviderWrapper),
+    "useTheme": (()=>useTheme)
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 ;
-var _s = __turbopack_context__.k.signature();
+var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.signature();
 'use client';
 ;
-function ThemeProviderWrapper({ children }) {
+const ThemeContext = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createContext"])(undefined);
+const useTheme = ()=>{
     _s();
+    const context = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useContext"])(ThemeContext);
+    if (!context) {
+        throw new Error('useTheme must be used within a ThemeProvider');
+    }
+    return context;
+};
+_s(useTheme, "b9L3QQ+jgeyIrH0NfHrJ8nn7VMU=");
+function ThemeProviderWrapper({ children }) {
+    _s1();
+    const [theme, setTheme] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])('light');
+    // Set initial theme based on localStorage or system preference
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "ThemeProviderWrapper.useEffect": ()=>{
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light' || savedTheme === 'dark') {
+                setTheme(savedTheme);
+                document.documentElement.classList.toggle('dark', savedTheme === 'dark');
+                document.documentElement.style.colorScheme = savedTheme;
+            } else {
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                setTheme(prefersDark ? 'dark' : 'light');
+                document.documentElement.classList.toggle('dark', prefersDark);
+                document.documentElement.style.colorScheme = prefersDark ? 'dark' : 'light';
+            }
+        }
+    }["ThemeProviderWrapper.useEffect"], []);
+    // Listen to system theme changes and update if no localStorage theme set
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "ThemeProviderWrapper.useEffect": ()=>{
             const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
             const handleChange = {
                 "ThemeProviderWrapper.useEffect.handleChange": (e)=>{
-                    if (!localStorage.theme) {
-                        document.documentElement.classList.toggle('dark', e.matches);
-                        document.documentElement.style.colorScheme = e.matches ? 'dark' : 'light';
+                    if (!localStorage.getItem('theme')) {
+                        const newTheme = e.matches ? 'dark' : 'light';
+                        setTheme(newTheme);
+                        document.documentElement.classList.toggle('dark', newTheme === 'dark');
+                        document.documentElement.style.colorScheme = newTheme;
                     }
                 }
             }["ThemeProviderWrapper.useEffect.handleChange"];
@@ -277,11 +308,26 @@ function ThemeProviderWrapper({ children }) {
             })["ThemeProviderWrapper.useEffect"];
         }
     }["ThemeProviderWrapper.useEffect"], []);
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
+    const toggleTheme = ()=>{
+        const newTheme = theme === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme);
+        localStorage.setItem('theme', newTheme);
+        document.documentElement.classList.toggle('dark', newTheme === 'dark');
+        document.documentElement.style.colorScheme = newTheme;
+    };
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(ThemeContext.Provider, {
+        value: {
+            theme,
+            toggleTheme
+        },
         children: children
-    }, void 0, false);
+    }, void 0, false, {
+        fileName: "[project]/components/ThemeProviderWrapper.tsx",
+        lineNumber: 70,
+        columnNumber: 5
+    }, this);
 }
-_s(ThemeProviderWrapper, "OD7bBpZva5O2jO+Puf00hKivP7c=");
+_s1(ThemeProviderWrapper, "l0NnHMBAjTNA2m05PT0LPL3eOKc=");
 _c = ThemeProviderWrapper;
 var _c;
 __turbopack_context__.k.register(_c, "ThemeProviderWrapper");
