@@ -21,6 +21,7 @@ const nextConfig = {
     ],
   },
   turbopack: {
+    // Turbopack is enabled for development with `next dev --turbo`
     // Add any specific Turbopack options here if needed
   }
 }

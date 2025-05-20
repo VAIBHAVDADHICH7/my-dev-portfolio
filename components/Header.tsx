@@ -35,7 +35,7 @@ export default function Header() {
   }, [menuOpen])
 
   return (
-    <header className="fixed top-4 left-1/2 transform -translate-x-1/2 w-[calc(100%-2rem)] max-w-7xl bg-white dark:bg-[#1e1e1e] rounded-full shadow-lg z-50 backdrop-blur-md" role="banner">
+    <header className={`fixed top-4 left-1/2 transform -translate-x-1/2 w-[calc(100%-2rem)] max-w-7xl bg-white dark:bg-[#1e1e1e] ${menuOpen ? 'rounded-none' : 'rounded-full'} shadow-lg z-50 backdrop-blur-md`} role="banner">
       <div className="flex justify-between items-center py-4 px-6">
         <h1 className="font-mono text-lg font-bold tracking-wide select-none cursor-default text-black dark:text-white">Vaibhav.dev</h1>
 
@@ -92,7 +92,7 @@ export default function Header() {
       {menuOpen && (
         <nav
           ref={menuRef}
-          className="md:hidden px-6 pb-4 space-y-2 bg-white dark:bg-[#1e1e1e] rounded-b-full"
+          className="md:hidden px-6 pb-4 space-y-2 bg-white dark:bg-[#1e1e1e] rounded-none"
           role="navigation"
           aria-label="Mobile navigation"
         >

@@ -64,9 +64,13 @@ To run this portfolio locally, follow these steps:
 
 Open your browser and navigate to http://localhost:3000 to view the portfolio.
 
+**Note:** The development server uses Turbopack for faster builds and hot module replacement. This is enabled by the `--turbo` flag in the `dev` script.
+
 ## Deployment
 
 This portfolio can be deployed on any platform supporting Next.js applications, such as Vercel, Netlify, or your own server.
+
+**Note:** Production builds currently use Webpack as Turbopack production support is experimental. Use `npm run build` and `npm start` for production deployment.
 
 ## Contribution
 

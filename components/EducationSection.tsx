@@ -103,7 +103,7 @@ const EducationSection: React.FC = () => {
         {/* Skills */}
         <div>
           <h3 className="text-2xl font-semibold mb-4">Skills</h3>
-          <ul className="grid grid-cols-2 gap-4">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {skillsData.map((skill, index) => (
               <li key={index} className="bg-gray-800 rounded-md shadow p-4 flex justify-between items-center">
                 <span className="font-medium">{skill.name}</span>
