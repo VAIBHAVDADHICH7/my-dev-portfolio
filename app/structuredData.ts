@@ -1,4 +1,6 @@
-export const structuredData = {
+import projects from './projects/projectsData';
+
+const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Vaibhav Dadhich",
@@ -12,4 +14,33 @@ export const structuredData = {
     "@type": "Organization",
     "name": "Vaibhav Dadhich Portfolio"
   }
-}
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "url": "https://www.vaibhavdadhich.me",
+  "name": "Vaibhav Dadhich Portfolio",
+  "description": "Personal portfolio website built with Next.js showcasing projects, blog, and interactive playground."
+};
+
+const projectSchemas = projects.map(project => ({
+  "@type": "CreativeWork",
+  "name": project.title,
+  "description": project.description,
+  "url": project.demo || project.github,
+  "keywords": project.tags.join(", "),
+  "creator": {
+    "@type": "Person",
+    "name": "Vaibhav Dadhich"
+  }
+}));
+
+export const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    personSchema,
+    websiteSchema,
+    ...projectSchemas
+  ]
+};
