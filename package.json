@@ -1,47 +1,47 @@
 {
-    "name": "my-dev-portfolio",
-    "version": "1.0.0",
-    "private": true,
-    "scripts": {
-        "dev": "next dev --turbo",
-        "build": "next build",
-        "start": "next start",
-        "lint": "next lint"
-    },
-    "dependencies": {
-        "@react-three/drei": "^9.56.3",
-        "@react-three/fiber": "^8.13.5",
-        "@vercel/analytics": "^1.5.0",
-        "@vercel/speed-insights": "^1.2.0",
-        "framer-motion": "^10.12.16",
-        "glob": "^11.0.1",
-        "next": "^15.3.2",
-        "next-themes": "^0.2.1",
-        "react": "^18.3.1",
-        "react-dom": "^18.3.1",
-        "react-icons": "^4.12.0",
-        "rimraf": "^6.0.1",
-        "three": "^0.175.0",
-        "three-mesh-bvh": "^0.8.0"
-    },
-    "devDependencies": {
-        "@next/bundle-analyzer": "^15.3.1",
-        "@types/node": "^22.14.0",
-        "@types/react": "^19.1.1",
-        "@types/react-dom": "^19.1.2",
-        "@types/sinonjs__fake-timers": "^8.1.5",
-        "autoprefixer": "^10.4.21",
-        "cross-env": "^7.0.3",
-        "eslint": "^8.57.1",
-        "eslint-config-next": "^15.3.0",
-        "postcss": "^8.5.3",
-        "tailwindcss": "^3.4.17",
-        "typescript": "^5.8.3"
-    },
-    "browserslist": [
-        ">0.3%",
-        "not dead",
-        "not op_mini all",
-        "last 2 versions"
-    ]
+  "name": "my-dev-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbo",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.56.3",
+    "@react-three/fiber": "^8.13.5",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
+    "framer-motion": "^10.12.16",
+    "glob": "^11.0.1",
+    "next": "15.3.8",
+    "next-themes": "^0.2.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^4.12.0",
+    "rimraf": "^6.0.1",
+    "three": "^0.175.0",
+    "three-mesh-bvh": "^0.8.0"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^15.3.1",
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.1.1",
+    "@types/react-dom": "^19.1.2",
+    "@types/sinonjs__fake-timers": "^8.1.5",
+    "autoprefixer": "^10.4.21",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^15.3.0",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.8.3"
+  },
+  "browserslist": [
+    ">0.3%",
+    "not dead",
+    "not op_mini all",
+    "last 2 versions"
+  ]
 }
